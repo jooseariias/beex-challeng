@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/MaterialIcons";
 import {
   DrawerContentScrollView,
   DrawerItemList,
@@ -8,7 +9,8 @@ export default function CustomDrawer(props: any) {
   return (
     <DrawerContentScrollView {...props}>
       <View style={styles.header}>
-        <Text style={styles.title}>Menú</Text>
+        <Icon name="menu" size={30} color="white" />
+        <Text style={styles.title}> Menú</Text>
       </View>
       <DrawerItemList {...props} />
     </DrawerContentScrollView>
@@ -18,12 +20,13 @@ export default function CustomDrawer(props: any) {
 const styles = StyleSheet.create({
   header: {
     padding: 16,
-    backgroundColor: "#1f2937",
+    alignItems: "center",
+    flexDirection: "row",
+    marginBottom: 6,
   },
   title: {
     color: "white",
-    fontSize: 27,
+    fontSize: 30,
     fontWeight: "600",
-    marginBottom: 16,
   },
 });
