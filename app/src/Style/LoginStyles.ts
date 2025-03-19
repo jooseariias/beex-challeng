@@ -1,14 +1,13 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+export const loginStyles = StyleSheet.create({
   background: {
-    width: "100%",
-    height: "100%",
-  },
-  container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  container: {
+    width: "100%",
     padding: 24,
   },
   title: {
@@ -16,15 +15,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "white",
-    marginBottom: 28,
+    marginBottom: 36,
   },
   inputGroup: {
     width: "100%",
     marginBottom: 16,
   },
   label: {
+    fontSize: 22,
     color: "white",
-    fontSize: 20,
     marginBottom: 8,
   },
   input: {
@@ -38,24 +37,26 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset: { width: 0, height: 2 },
   },
-  error: {
+  errorText: {
     color: "red",
-    fontSize: 16,
+    fontSize: 18,
     marginTop: 4,
+  },
+  passwordContainer: {
+    position: "relative",
   },
   eyeIcon: {
     position: "absolute",
     right: 16,
-    paddingTop:16,
     top: "50%",
     transform: [{ translateY: -12 }],
   },
   button: {
     backgroundColor: "#3b82f6",
-    paddingHorizontal: 40,
-    paddingVertical: 16,
+    padding: 12,
     borderRadius: 8,
     marginTop: 20,
+    textAlign: "center",
   },
   buttonText: {
     color: "white",
@@ -63,13 +64,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
   },
-  backButton: {
-    color: "white",
-    fontWeight: "bold",
+  registerText: {
     fontSize: 18,
-    marginTop: 28,
     textAlign: "center",
+    color: "white",
+    marginTop: 28,
+  },
+  registerLink: {
+    color: "#3b82f6",
+    fontWeight: "bold",
+    fontSize: 20,
+    textDecorationLine: "underline",
   },
 });
-
-export default styles;
