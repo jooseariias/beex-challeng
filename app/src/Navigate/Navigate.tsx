@@ -5,6 +5,7 @@ const Stack = createStackNavigator();
 
 import Register from "@/Screens/Register";
 import Login from "@/Screens/Login";
+import Home from "@/Screens/Home";
 
 export default function Navigation() {
   return (
@@ -14,9 +15,14 @@ export default function Navigation() {
         component={Register}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name="Login"
         component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
