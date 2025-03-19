@@ -8,6 +8,7 @@ const Drawer = createDrawerNavigator();
 import ComplexSearch from "@/Screens/ComplexSearch";
 import Profile from "@/Screens/Profile";
 import SearchMatches from "@/Screens/SearchMatches";
+import Matchmaking from "@/Screens/Matchmaking";
 
 export default function DrawerNavigator() {
   return (
@@ -30,10 +31,62 @@ export default function DrawerNavigator() {
         ),
       })}
     >
-      <Drawer.Screen name="Buscar" component={ComplexSearch} />
-      <Drawer.Screen name="Mi Perfil" component={Profile} />
-      <Drawer.Screen name="Partidos" component={SearchMatches} />
-
+      <Drawer.Screen
+        name="Buscar"
+        component={ComplexSearch}
+        options={{
+          drawerLabelStyle: { fontSize: 18, fontWeight: 'bold', color:"white" },
+          drawerIcon: ({ focused }) => (
+            <Icon
+              name="search"
+              size={24}
+              color={focused ? "#ff6347" : "white"} 
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Mi Perfil"
+        component={Profile}
+        options={{
+          drawerLabelStyle: { fontSize: 18, fontWeight: 'bold' ,color:"white" },
+          drawerIcon: ({ focused }) => (
+            <Icon
+              name="account-circle"
+              size={24}
+              color={focused ? "#ff6347" : "white"} 
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Partidos"
+        component={SearchMatches}
+        options={{
+          drawerLabelStyle: { fontSize: 18, fontWeight: 'bold' ,color:"white"},
+          drawerIcon: ({ focused }) => (
+            <Icon
+              name="sports-soccer"
+              size={24}
+              color={focused ? "#ff6347" : "white"} 
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Matchmaking"
+        component={Matchmaking}
+        options={{
+          drawerLabelStyle: { fontSize: 18, fontWeight: 'bold' ,color:"white"},
+          drawerIcon: ({ focused }) => (
+            <Icon
+              name="group-add"
+              size={24}
+              color={focused ? "#ff6347" : "white"} 
+            />
+          ),
+        }}
+      />
     </Drawer.Navigator>
   );
 }
