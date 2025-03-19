@@ -18,12 +18,12 @@ export default function CustomDrawer(props: any) {
 const styles = StyleSheet.create({
   header: {
     padding: 16,
-    backgroundColor: "#1f2937", 
+    backgroundColor: "#1f2937",
   },
   title: {
     color: "white",
-    fontSize: 20,
-    fontWeight: "600", 
-    marginBottom: 16, 
+    fontSize: 27,
+    fontWeight: "600",
+    marginBottom: 16,
   },
 });
