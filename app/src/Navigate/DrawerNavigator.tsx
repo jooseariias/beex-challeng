@@ -5,8 +5,8 @@ import CustomDrawer from "@/Components/CustomDrawer";
 
 const Drawer = createDrawerNavigator();
 
+import ComplexSearch from "@/Screens/ComplexSearch";
 import Profile from "@/Screens/Profile";
-
 
 export default function DrawerNavigator() {
   return (
@@ -21,14 +21,15 @@ export default function DrawerNavigator() {
         drawerLabelStyle: { color: "white" },
         headerLeft: () => (
           <TouchableOpacity
-            className="ml-4"
+            style={{ marginLeft: 20 }}
             onPress={() => navigation.openDrawer()}
           >
-            <Icon name="menu" size={28} color="white" />
+            <Icon name="menu" size={40} color="white" />
           </TouchableOpacity>
         ),
       })}
     >
+      <Drawer.Screen name="Buscar" component={ComplexSearch} />
       <Drawer.Screen name="Mi Perfil" component={Profile} />
     </Drawer.Navigator>
   );

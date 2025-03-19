@@ -18,3 +18,15 @@ export type User = {
   level: string;
   password: string;
 };
+
+export type Complex = {
+  id: number;
+  name: string;
+  city: string;
+  distance: number;
+  isFavorite: boolean;
+};
+export type CardComplexProps = {
+  item: Complex;
+  toggleFavorite: (id: number) => void;
+};
