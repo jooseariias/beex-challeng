@@ -7,6 +7,7 @@ const Drawer = createDrawerNavigator();
 
 import ComplexSearch from "@/Screens/ComplexSearch";
 import Profile from "@/Screens/Profile";
+import SearchMatches from "@/Screens/SearchMatches";
 
 export default function DrawerNavigator() {
   return (
@@ -31,6 +32,8 @@ export default function DrawerNavigator() {
     >
       <Drawer.Screen name="Buscar" component={ComplexSearch} />
       <Drawer.Screen name="Mi Perfil" component={Profile} />
+      <Drawer.Screen name="Partidos" component={SearchMatches} />
+
     </Drawer.Navigator>
   );
 }

@@ -30,3 +30,15 @@ export type CardComplexProps = {
   item: Complex;
   toggleFavorite: (id: number) => void;
 };
+export type Match = {
+  id: number;
+  name: string;
+  minRank: number;
+  playersRequired: number;
+  playersJoined: number;
+};
+
+export type CardMatchItemProps = {
+  item: Match;
+  handleJoinMatch: (name: string) => void;
+};
