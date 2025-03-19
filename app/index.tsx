@@ -1,9 +1,11 @@
-import { Text, View } from "react-native";
+import Navigation from "@/Navigate/Navigate";
+import { StatusBar } from "react-native";
 
 export default function Index() {
   return (
-    <View>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <Navigation />
+    </>
   );
 }
